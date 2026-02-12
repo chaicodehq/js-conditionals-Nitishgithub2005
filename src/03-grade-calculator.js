@@ -26,4 +26,39 @@
  */
 export function calculateGrade(score, hasExtraCredit) {
   // Your code here
+  var grade=""
+
+  if(hasExtraCredit & score <=100){
+    if( score <=95){
+      score+=5
+    }
+    else{
+      score=100
+    }
+  } 
+   var gradeA = score>= 90 & score  <= 100
+  var gradeB = score>= 80 & score  <= 89
+  var gradeC = score >= 70 & score  <= 79
+  var gradeD = score >=60 & score  <= 69
+  var gradeF = score  >= 0  & score <= 59
+  if (gradeA) {
+    grade = "A"
+  }
+  else if (gradeB){
+    grade = "B"
+  }
+  else if(gradeC){
+    grade = "C"
+  }
+  else if(gradeD){
+    grade = "D"
+  }
+  else if(gradeF){
+    grade = "F"
+  }
+  else{
+    grade = "INVALID"
+  }
+
+  return grade
 }
